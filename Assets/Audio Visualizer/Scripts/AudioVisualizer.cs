@@ -5,10 +5,18 @@ using UnityEngine;
 public class AudioVisualizer : MonoBehaviour
 {
     public AudioSource audioSource;
-    public static float[] samples = new float[512];
-    public static float[] freqBand = new float[8];
-    public static float[] bandBuffer = new float[8];
+    float[] samples = new float[512];
+    float[] freqBand = new float[8];
+    float[] bandBuffer = new float[8];
+
     float[] bufferDecrease = new float[8];
+    float[] freqBandHighest = new float[8];
+
+    public static float[] audioBand = new float[8];
+    public static float[] audioBandBuffer = new float[8];
+
+    public static float amplitude, amplitudeBuffer;
+    float amplitudeHighest;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +30,41 @@ public class AudioVisualizer : MonoBehaviour
         GetSpectrumAudioSource();
         MakeFrequencyBands();
         BandBuffer();
+        CreateAudioBands();
+        GetAmplitude();
+    }
+
+    void GetAmplitude()
+    {
+        float currentAmplitude = 0;
+        float currentAmplitudeBuffer = 0;
+
+        for (int i = 0; i < 8; i++)
+        {
+            currentAmplitude += audioBand[i];
+            currentAmplitudeBuffer += audioBandBuffer[i];
+        }
+
+        if (currentAmplitude > amplitudeHighest)
+        {
+            amplitudeHighest = currentAmplitude;
+        }
+
+        amplitude = currentAmplitude / amplitudeHighest;
+        amplitudeBuffer = currentAmplitudeBuffer / amplitudeHighest;
+    }
+
+    void CreateAudioBands()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if (freqBand[i] > freqBandHighest[i])
+            {
+                freqBandHighest[i] = freqBand[i];
+            }
+            audioBand[i] = (freqBand[i] / freqBandHighest[i]);
+            audioBandBuffer[i] = (bandBuffer[i] / freqBandHighest[i]);
+        }
     }
 
     void GetSpectrumAudioSource()
