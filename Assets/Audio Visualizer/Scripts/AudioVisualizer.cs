@@ -5,7 +5,9 @@ using UnityEngine;
 public class AudioVisualizer : MonoBehaviour
 {
     public AudioSource audioSource;
-    float[] samples = new float[512];
+    float[] samplesLeft = new float[512];
+    float[] samplesRight = new float[512];
+
     float[] freqBand = new float[8];
     float[] bandBuffer = new float[8];
 
@@ -17,11 +19,16 @@ public class AudioVisualizer : MonoBehaviour
 
     public static float amplitude, amplitudeBuffer;
     float amplitudeHighest;
+    public float audioProfile = 5;
+
+    public enum Channel { STEREO, LEFT, RIGHT}
+
+    public Channel channel = Channel.STEREO;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioProfile(audioProfile);
     }
 
     // Update is called once per frame
@@ -32,6 +39,14 @@ public class AudioVisualizer : MonoBehaviour
         BandBuffer();
         CreateAudioBands();
         GetAmplitude();
+    }
+
+    void AudioProfile(float value)
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            freqBandHighest[i] = value;
+        }
     }
 
     void GetAmplitude()
@@ -69,7 +84,8 @@ public class AudioVisualizer : MonoBehaviour
 
     void GetSpectrumAudioSource()
     {
-        audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
+        audioSource.GetSpectrumData(samplesLeft, 0, FFTWindow.Blackman);
+        audioSource.GetSpectrumData(samplesRight, 1, FFTWindow.Blackman);
     }
 
     void BandBuffer()
@@ -118,7 +134,19 @@ public class AudioVisualizer : MonoBehaviour
 
             for (int j = 0; j < sampleCount; j++)
             {
-                average += samples[count] * (count + 1);
+                switch (channel)
+                {
+                    case Channel.STEREO:
+                        average += (samplesLeft[count] + samplesRight[count]) * (count + 1);
+                        break;
+                    case Channel.LEFT:
+                        average += samplesLeft[count] * (count + 1);
+                        break;
+                    case Channel.RIGHT:
+                        average += samplesRight[count] * (count + 1);
+                        break;
+                }
+                
                 count++;
             }
 
