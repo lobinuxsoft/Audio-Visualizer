@@ -21,15 +21,15 @@ public class ScaleOnAmplitude : MonoBehaviour
         if (useBuffer)
         {
             transform.localScale = new Vector3(
-                                                (AudioVisualizer.amplitudeBuffer * maxScale) + startScale,
-                                                (AudioVisualizer.amplitudeBuffer * maxScale) + startScale,
-                                                (AudioVisualizer.amplitudeBuffer * maxScale) + startScale
+                                                (AudioVisualizer.instance.amplitudeBuffer * maxScale) + startScale,
+                                                (AudioVisualizer.instance.amplitudeBuffer * maxScale) + startScale,
+                                                (AudioVisualizer.instance.amplitudeBuffer * maxScale) + startScale
                                                );
 
             Color color = new Color(
-                                        customColor.r * AudioVisualizer.amplitudeBuffer,
-                                        customColor.g * AudioVisualizer.amplitudeBuffer,
-                                        customColor.b * AudioVisualizer.amplitudeBuffer
+                                        customColor.r * AudioVisualizer.instance.amplitudeBuffer,
+                                        customColor.g * AudioVisualizer.instance.amplitudeBuffer,
+                                        customColor.b * AudioVisualizer.instance.amplitudeBuffer
                                     );
 
             material.SetColor("_EmissionColor", color);
@@ -37,15 +37,15 @@ public class ScaleOnAmplitude : MonoBehaviour
         else
         {
             transform.localScale = new Vector3(
-                                                (AudioVisualizer.amplitude * maxScale) + startScale,
-                                                (AudioVisualizer.amplitude * maxScale) + startScale,
-                                                (AudioVisualizer.amplitude * maxScale) + startScale
+                                                (AudioVisualizer.instance.amplitude * maxScale) + startScale,
+                                                (AudioVisualizer.instance.amplitude * maxScale) + startScale,
+                                                (AudioVisualizer.instance.amplitude * maxScale) + startScale
                                                );
 
             Color color = new Color(
-                                        customColor.r * AudioVisualizer.amplitude,
-                                        customColor.r * AudioVisualizer.amplitude,
-                                        customColor.r * AudioVisualizer.amplitude
+                                        customColor.r * AudioVisualizer.instance.amplitude,
+                                        customColor.g * AudioVisualizer.instance.amplitude,
+                                        customColor.b * AudioVisualizer.instance.amplitude
                                     );
 
             material.SetColor("_EmissionColor", color);

@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class AudioVisualizer : MonoBehaviour
 {
+    public static AudioVisualizer instance;
+
     public AudioSource audioSource;
     float[] samplesLeft = new float[512];
     float[] samplesRight = new float[512];
 
     float[] freqBand = new float[8];
     float[] bandBuffer = new float[8];
-
     float[] bufferDecrease = new float[8];
     float[] freqBandHighest = new float[8];
 
-    public static float[] audioBand = new float[8];
-    public static float[] audioBandBuffer = new float[8];
+    //Audio 64
+    float[] freqBand64 = new float[64];
+    float[] bandBuffer64 = new float[64];
+    float[] bufferDecrease64 = new float[64];
+    float[] freqBandHighest64 = new float[64];
 
-    public static float amplitude, amplitudeBuffer;
+    [HideInInspector] public float[] audioBand, audioBandBuffer;
+
+    //Audio 64
+    [HideInInspector] public float[] audioBand64, audioBandBuffer64;
+
+    [HideInInspector] public float amplitude, amplitudeBuffer;
     float amplitudeHighest;
     public float audioProfile = 5;
 
@@ -25,9 +34,20 @@ public class AudioVisualizer : MonoBehaviour
 
     public Channel channel = Channel.STEREO;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        audioBand = new float[8];
+        audioBandBuffer = new float[8];
+
+        audioBand64 = new float[64];
+        audioBandBuffer64 = new float[64];
+
         AudioProfile(audioProfile);
     }
 
@@ -36,8 +56,11 @@ public class AudioVisualizer : MonoBehaviour
     {
         GetSpectrumAudioSource();
         MakeFrequencyBands();
+        MakeFrequencyBands64();
         BandBuffer();
+        BandBuffer64();
         CreateAudioBands();
+        CreateAudioBands64();
         GetAmplitude();
     }
 
@@ -82,6 +105,19 @@ public class AudioVisualizer : MonoBehaviour
         }
     }
 
+    void CreateAudioBands64()
+    {
+        for (int i = 0; i < 64; i++)
+        {
+            if (freqBand64[i] > freqBandHighest64[i])
+            {
+                freqBandHighest64[i] = freqBand64[i];
+            }
+            audioBand64[i] = (freqBand64[i] / freqBandHighest64[i]);
+            audioBandBuffer64[i] = (bandBuffer64[i] / freqBandHighest64[i]);
+        }
+    }
+
     void GetSpectrumAudioSource()
     {
         audioSource.GetSpectrumData(samplesLeft, 0, FFTWindow.Blackman);
@@ -102,6 +138,24 @@ public class AudioVisualizer : MonoBehaviour
             {
                 bandBuffer[i] -= bufferDecrease[i];
                 bufferDecrease[i] *= 1.2f;
+            }
+        }
+    }
+
+    void BandBuffer64()
+    {
+        for (int i = 0; i < 64; i++)
+        {
+            if (freqBand64[i] > bandBuffer64[i])
+            {
+                bandBuffer64[i] = freqBand64[i];
+                bufferDecrease64[i] = 0.005f;
+            }
+
+            if (freqBand64[i] < bandBuffer64[i])
+            {
+                bandBuffer64[i] -= bufferDecrease64[i];
+                bufferDecrease64[i] *= 1.2f;
             }
         }
     }
@@ -153,6 +207,52 @@ public class AudioVisualizer : MonoBehaviour
             average /= count;
 
             freqBand[i] = average * 10;
+        }
+    }
+
+    void MakeFrequencyBands64()
+    {
+
+        int count = 0;
+        int sampleCount = 1;
+        int power = 0;
+
+        for (int i = 0; i < 64; i++)
+        {
+            float average = 0;
+
+            if (i == 16 || i == 32 || i == 40 || i == 48 || i == 56)
+            {
+                power++;
+                sampleCount = (int)Mathf.Pow(2, power);
+
+                if (power == 3)
+                {
+                    sampleCount -= 2;
+                }
+            }
+
+            for (int j = 0; j < sampleCount; j++)
+            {
+                switch (channel)
+                {
+                    case Channel.STEREO:
+                        average += (samplesLeft[count] + samplesRight[count]) * (count + 1);
+                        break;
+                    case Channel.LEFT:
+                        average += samplesLeft[count] * (count + 1);
+                        break;
+                    case Channel.RIGHT:
+                        average += samplesRight[count] * (count + 1);
+                        break;
+                }
+
+                count++;
+            }
+
+            average /= count;
+
+            freqBand64[i] = average * 80;
         }
     }
 }

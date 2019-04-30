@@ -23,14 +23,14 @@ public class ParamCube : MonoBehaviour
         {
             transform.localScale = new Vector3(
                                             transform.localScale.x,
-                                            (AudioVisualizer.audioBandBuffer[band] * scaleMultiplier) + startScale,
+                                            (AudioVisualizer.instance.audioBandBuffer[band] * scaleMultiplier) + startScale,
                                             transform.localScale.z
                                            );
 
             Color color = new Color(
-                                        customColor.r * AudioVisualizer.audioBandBuffer[band],
-                                        customColor.g * AudioVisualizer.audioBandBuffer[band],
-                                        customColor.b * AudioVisualizer.audioBandBuffer[band]
+                                        customColor.r * AudioVisualizer.instance.audioBandBuffer[band],
+                                        customColor.g * AudioVisualizer.instance.audioBandBuffer[band],
+                                        customColor.b * AudioVisualizer.instance.audioBandBuffer[band]
                                     );
 
             material.SetColor("_EmissionColor", color);
@@ -39,14 +39,14 @@ public class ParamCube : MonoBehaviour
         {
             transform.localScale = new Vector3(
                                             transform.localScale.x,
-                                            (AudioVisualizer.audioBand[band] * scaleMultiplier) + startScale,
+                                            (AudioVisualizer.instance.audioBand[band] * scaleMultiplier) + startScale,
                                             transform.localScale.z
                                            );
 
             Color color = new Color(
-                                        customColor.r * AudioVisualizer.audioBand[band],
-                                        customColor.g * AudioVisualizer.audioBand[band],
-                                        customColor.b * AudioVisualizer.audioBand[band]
+                                        customColor.r * AudioVisualizer.instance.audioBand[band],
+                                        customColor.g * AudioVisualizer.instance.audioBand[band],
+                                        customColor.b * AudioVisualizer.instance.audioBand[band]
                                     );
             material.SetColor("_EmissionColor", color);
         }
