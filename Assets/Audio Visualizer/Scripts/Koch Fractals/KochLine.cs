@@ -12,6 +12,7 @@ public class KochLine : KochGenerator
 
     [Header("Audio")]
     public AudioVisualizer audioVisualizer;
+    public bool useBuffer = false;
     public int[] audioBand;
     public Material material;
     [ColorUsage(true,true)] public Color color;
@@ -39,14 +40,30 @@ public class KochLine : KochGenerator
     // Update is called once per frame
     void Update()
     {
-        materialInstance.SetColor("_EmissionColor", color * audioVisualizer.audioBandBuffer[audioBandMaterial] * emissionMultiplier);
+        if (useBuffer)
+        {
+            materialInstance.SetColor("_EmissionColor", color * audioVisualizer.audioBandBuffer[audioBandMaterial] * emissionMultiplier);
+        }
+        else
+        {
+            materialInstance.SetColor("_EmissionColor", color * audioVisualizer.audioBand[audioBandMaterial] * emissionMultiplier);
+        }
+        
 
         if (_generationCount != 0)
         {
             int count = 0;
             for (int i = 0; i < _initiatorPointAmount; i++)
             {
-                lerpAudio[i] = audioVisualizer.audioBandBuffer[audioBand[i]];
+                if (useBuffer)
+                {
+                    lerpAudio[i] = audioVisualizer.audioBand[audioBand[i]];
+                }
+                else
+                {
+                    lerpAudio[i] = audioVisualizer.audioBandBuffer[audioBand[i]];
+                }
+                
                 for (int j = 0; j < (_positions.Length - 1) / _initiatorPointAmount; j++)
                 {
                     lerpPositions[count] = Vector3.Lerp(_positions[count], _targetPositions[count], lerpAudio[i]);

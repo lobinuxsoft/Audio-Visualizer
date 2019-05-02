@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[3]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -292,22 +292,22 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.r
-      value: 0.87845707
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.g
-      value: 0
+      value: 0.62977695
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -482,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -492,7 +492,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[3]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -507,22 +507,22 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.r
-      value: 0.87845707
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.g
-      value: 0
+      value: 0.62977695
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -766,7 +766,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -776,7 +776,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[3]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -791,22 +791,22 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.r
-      value: 0.87845707
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.g
-      value: 0
+      value: 0.62977695
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -964,6 +964,36 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: _axis
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 14.257815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.g
+      value: 0.07464825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1129,32 +1159,32 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[3]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 3.5648696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
       propertyPath: color.g
-      value: 0.8807324
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 3.5648694
+      value: 1.6958812
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -1437,32 +1467,32 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[3]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 3.5648696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
       propertyPath: color.g
-      value: 0.8807324
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 3.5648694
+      value: 1.6958812
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -1638,7 +1668,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.10165993, y: 0.8825579, z: -0.22384854, w: 0.40080997}
-  m_LocalPosition: {x: -17.9, y: 10.7, z: 15.7}
+  m_LocalPosition: {x: -36.57, y: 24.14, z: 32.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 996887035}
@@ -2111,6 +2141,36 @@ PrefabInstance:
       propertyPath: _axis
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 14.257815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.g
+      value: 0.07464825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba20146d13f3e1408abdc9fecb15a22, type: 3}
 --- !u!4 &731961167 stripped
@@ -2525,6 +2585,36 @@ PrefabInstance:
       propertyPath: _axis
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 14.257815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.g
+      value: 0.07464825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba20146d13f3e1408abdc9fecb15a22, type: 3}
 --- !u!4 &924279873 stripped
@@ -2609,6 +2699,36 @@ PrefabInstance:
         type: 3}
       propertyPath: _lengthOfSide
       value: 7.0710673
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 14.257815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.g
+      value: 0.07464825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba20146d13f3e1408abdc9fecb15a22, type: 3}
@@ -2773,32 +2893,32 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[3]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 3.5648696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
       propertyPath: color.g
-      value: 0.8807324
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 3.5648694
+      value: 1.6958812
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -2957,7 +3077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScale: 1
-  maxScale: 5
+  maxScale: 10
   useBuffer: 0
   customColor: {r: 3, g: 0.59, b: 0, a: 1}
 --- !u!23 &1070791330
@@ -3174,32 +3294,32 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[3]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 3.5648696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
       propertyPath: color.g
-      value: 0.8807324
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 3.5648694
+      value: 1.6958812
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -3384,32 +3504,32 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[3]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 3.5648696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
       propertyPath: color.g
-      value: 0.8807324
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 3.5648694
+      value: 1.6958812
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -3425,6 +3545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: audioBandMaterial
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: _lengthOfSide
+      value: 7.0710673
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba20146d13f3e1408abdc9fecb15a22, type: 3}
@@ -3454,7 +3579,7 @@ Transform:
   m_GameObject: {fileID: 1224861517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 7551287644789776102}
   - {fileID: 1006458499}
@@ -3490,8 +3615,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioVisualizer: {fileID: 1417382282}
-  rotateAxis: {x: 1, y: 1, z: 1}
-  rotateSpeed: {x: -100, y: 20, z: 40}
+  useBuffer: 0
+  rotateAxis: {x: 1, y: 1, z: 0}
+  rotateSpeed: {x: -10, y: 20, z: 0}
 --- !u!1001 &1254267174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3647,7 +3773,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -3657,7 +3783,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[3]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -3672,27 +3798,32 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.r
-      value: 0.87845707
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.g
-      value: 0
+      value: 0.62977695
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBandMaterial
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: _lengthOfSide
+      value: 7.0710673
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba20146d13f3e1408abdc9fecb15a22, type: 3}
@@ -4083,7 +4214,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -4093,7 +4224,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[3]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -4108,22 +4239,22 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.r
-      value: 0.87845707
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.g
-      value: 0
+      value: 0.62977695
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -4206,7 +4337,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f6a53f8536121b6428afeb8d515f95b5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4f02038a4085d094689c1a51cd1367cf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -4326,38 +4457,38 @@ MonoBehaviour:
     type: 3}
   defaultObjectScale: {x: 0.5, y: 0, z: 0.5}
   maxScale: 10
-  maxRadius: 6
+  maxRadius: 20
   useBuffer: 0
   customGradient:
     serializedVersion: 2
-    key0: {r: 0.990566, g: 0.023362402, b: 0.023362402, a: 1}
-    key1: {r: 0.99215686, g: 0.65428483, b: 0.117647044, a: 1}
-    key2: {r: 0.9680173, g: 0.99215686, b: 0.24705878, a: 1}
-    key3: {r: 0.4420972, g: 0.99215686, b: 0.36078426, a: 0}
+    key0: {r: 4, g: 0, b: 0.078431375, a: 1}
+    key1: {r: 0, g: 0.047058824, b: 1.945098, a: 1}
+    key2: {r: 4, g: 0, b: 0.078431375, a: 1}
+    key3: {r: 0.4420972, g: 0.99215686, b: 0.36078426, a: 1}
     key4: {r: 0.4666667, g: 0.99215686, b: 0.58554137, a: 0}
     key5: {r: 0.57254905, g: 0.99215686, b: 0.88118076, a: 0}
     key6: {r: 0.6666667, g: 0.8473955, b: 0.99215686, a: 0}
     key7: {r: 0, g: 0.03215162, b: 0.990566, a: 0}
     ctime0: 0
-    ctime1: 8481
-    ctime2: 16962
+    ctime1: 32768
+    ctime2: 65535
     ctime3: 24865
     ctime4: 33153
     ctime5: 43369
     ctime6: 52428
     ctime7: 63222
     atime0: 0
-    atime1: 65535
-    atime2: 51079
+    atime1: 32768
+    atime2: 65535
     atime3: 65535
     atime4: 0
     atime5: 0
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 8
-    m_NumAlphaKeys: 2
-  colorMultiplier: 10
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorMultiplier: 4
 --- !u!4 &1428101399
 Transform:
   m_ObjectHideFlags: 0
@@ -4386,6 +4517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioVisualizer: {fileID: 1417382282}
+  useBuffer: 0
   rotateAxis: {x: 1, y: 1, z: 0}
   rotateSpeed: {x: 10, y: 20, z: 0}
 --- !u!1001 &1453772986
@@ -4469,6 +4601,36 @@ PrefabInstance:
         type: 3}
       propertyPath: _axis
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 14.257815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.g
+      value: 0.07464825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba20146d13f3e1408abdc9fecb15a22, type: 3}
@@ -4853,32 +5015,32 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: audioBand.Array.data[3]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
-        type: 3}
-      propertyPath: color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 3.5648696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
       propertyPath: color.g
-      value: 0.8807324
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 3.5648694
+      value: 1.6958812
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -5268,7 +5430,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[0]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -5278,7 +5440,7 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[3]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -5293,22 +5455,22 @@ PrefabInstance:
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.r
-      value: 0.87845707
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.g
-      value: 0
+      value: 0.62977695
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: color.b
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
       propertyPath: audioBand.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
         type: 3}
@@ -5611,6 +5773,41 @@ PrefabInstance:
       propertyPath: audioVisualizer
       value: 
       objectReference: {fileID: 1417382282}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: _lengthOfSide
+      value: 7.0710673
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: audioBand.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.r
+      value: 14.257815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.g
+      value: 0.07464825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036436482558810264, guid: fba20146d13f3e1408abdc9fecb15a22,
+        type: 3}
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba20146d13f3e1408abdc9fecb15a22, type: 3}
 --- !u!4 &7551287644789776102 stripped
