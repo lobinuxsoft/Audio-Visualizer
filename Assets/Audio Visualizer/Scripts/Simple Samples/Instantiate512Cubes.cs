@@ -26,7 +26,8 @@ public class Instantiate512Cubes : MonoBehaviour
             sampleCubes[i] = go;
             materials[i] = go.GetComponent<MeshRenderer>().materials[0];
             colors[i] = customGradient.Evaluate((float)i / 64);
-            materials[i].SetColor("_Color", colors[i]);
+            //materials[i].SetColor("_Color", colors[i]);
+            materials[i].SetColor("_Color", Color.black);
         }
     }
 
