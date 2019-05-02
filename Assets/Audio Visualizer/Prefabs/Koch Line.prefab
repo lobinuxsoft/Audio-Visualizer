@@ -44,10 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb27513e304e5a446bfd48c90e4f8239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gizmosColor: {r: 0, g: 1, b: 1, a: 1}
-  axis: 0
-  initiator: 0
-  generator:
+  _axis: 2
+  _initiator: 1
+  _generator:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
@@ -63,24 +62,33 @@ MonoBehaviour:
       time: 0.33
       value: 0
       inSlope: -0
-      outSlope: 1.4705883
+      outSlope: 2500.3303
       tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.5
+      time: 0.3301
       value: 0.25
-      inSlope: 1.4705883
-      outSlope: -1.5624998
+      inSlope: 2500.3303
+      outSlope: 0
       tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.66
+      time: 0.6659
+      value: 0.25
+      inSlope: -0
+      outSlope: -2499.5852
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.666
       value: 0
-      inSlope: -1.5624998
+      inSlope: -2499.5852
       outSlope: 0
       tangentMode: 69
       weightedMode: 0
@@ -98,9 +106,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  initiatorSize: 4
-  lerpAmount: 0
-  multiplier: 1
+  _startGens:
+  - outwards: 0
+    scale: 1
+  _useBezierCurve: 0
+  _bezierVertexCount: 8
+  _initiatorSize: 10
+  audioVisualizer: {fileID: 0}
+  audioBand: 00000000000000000000000000000000
+  material: {fileID: 2100000, guid: 8d49c7da4b05ada4f9ec93567d3b3a9a, type: 2}
+  color: {r: 15.999998, g: 0.5026177, b: 0, a: 1}
+  audioBandMaterial: 0
+  emissionMultiplier: 3
 --- !u!120 &8766074610291663125
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -143,7 +160,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.2
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:

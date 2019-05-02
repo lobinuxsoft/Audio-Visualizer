@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Instantiate512Cubes : MonoBehaviour
+public class Instantiate64Cubes : MonoBehaviour
 {
     public GameObject sampleCubePrefab;
+    public Vector3 defaultObjectScale = Vector3.one;
     public float maxScale = 1000f;
+    public float maxRadius = 50f;
     public bool useBuffer = true;
     GameObject[] sampleCubes = new GameObject[64];
     [GradientUsage(true)] public Gradient customGradient;
+    public float colorMultiplier = 2f;
     Material[] materials = new Material[64];
     Color[] colors = new Color[64];
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,7 @@ public class Instantiate512Cubes : MonoBehaviour
             go.name = "Sample Cube ID: " + i;
             this.transform.eulerAngles = new Vector3(0, -5.625f * i, 0);
             
-            go.transform.position = Vector3.forward * 50;
+            go.transform.position = Vector3.forward * maxRadius;
             go.transform.position += this.transform.position;
             sampleCubes[i] = go;
             materials[i] = go.GetComponent<MeshRenderer>().materials[0];
@@ -38,15 +42,15 @@ public class Instantiate512Cubes : MonoBehaviour
         {
             if (useBuffer)
             {
-                sampleCubes[i].transform.localScale = new Vector3(2.5f, (AudioVisualizer.instance.audioBandBuffer64[i] * maxScale) + 2, 2.5f);
+                sampleCubes[i].transform.localScale = new Vector3(defaultObjectScale.x, (AudioVisualizer.instance.audioBandBuffer64[i] * maxScale) + defaultObjectScale.y, defaultObjectScale.z);
                 Color color = colors[i] * AudioVisualizer.instance.audioBandBuffer64[i];
-                materials[i].SetColor("_EmissionColor", color * 2);
+                materials[i].SetColor("_EmissionColor", color * colorMultiplier);
             }
             else
             {
-                sampleCubes[i].transform.localScale = new Vector3(2.5f, (AudioVisualizer.instance.audioBand64[i] * maxScale) + 2, 2.5f);
+                sampleCubes[i].transform.localScale = new Vector3(defaultObjectScale.x, (AudioVisualizer.instance.audioBand64[i] * maxScale) + defaultObjectScale.y, defaultObjectScale.z);
                 Color color = colors[i] * AudioVisualizer.instance.audioBand64[i];
-                materials[i].SetColor("_EmissionColor", color * 2);
+                materials[i].SetColor("_EmissionColor", color * colorMultiplier);
             }
         }
     }

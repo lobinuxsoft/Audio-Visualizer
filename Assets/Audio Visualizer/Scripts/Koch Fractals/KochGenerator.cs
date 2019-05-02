@@ -12,8 +12,6 @@ public class KochGenerator : MonoBehaviour
         public float Length { get; set; }
     }
 
-    [SerializeField] Color gizmosColor = Color.white;
-
     protected enum InitiatorAxis
     {
         XAxis,
@@ -21,7 +19,7 @@ public class KochGenerator : MonoBehaviour
         ZAxis
     }
 
-    [SerializeField] protected InitiatorAxis axis = new InitiatorAxis();
+    [SerializeField] protected InitiatorAxis _axis = new InitiatorAxis();
 
     protected enum Initiator
     {
@@ -33,43 +31,82 @@ public class KochGenerator : MonoBehaviour
         Octagon
     }
 
-    [SerializeField] protected Initiator initiator = new Initiator();
+    [SerializeField] protected Initiator _initiator = new Initiator();
 
-    [SerializeField] protected AnimationCurve generator;
-    protected Keyframe[] keys;
-    protected int generationCount;
+    [SerializeField] protected AnimationCurve _generator;
 
-    protected int initiatorPointAmount;
+    [System.Serializable]
+    public struct StartGen
+    {
+        public bool outwards;
+        public float scale;
+    }
+
+    public StartGen[] _startGens;
+
+    protected Keyframe[] _keys;
+
+    [SerializeField] protected bool _useBezierCurve;
+    [SerializeField] [Range(8, 24)] protected int _bezierVertexCount;
+
+    protected int _generationCount;
+
+    protected int _initiatorPointAmount;
     Vector3[] initiatorPoint;
     Vector3 rotateVector;
     Vector3 rotateAxis;
     float initialRotation;
-    [SerializeField] protected float initiatorSize;
+    [SerializeField] protected float _initiatorSize;
 
     protected Vector3[] _positions;
     protected Vector3[] _targetPositions;
+    protected Vector3[] _bezierPosition;
     List<LineSegment> lineSegments;
+
+    protected Vector3[] BezierCurve(Vector3[] points, int vertexCount)
+    {
+        var pointList = new List<Vector3>();
+        for (int i = 0; i < points.Length; i += 2)
+        {
+            if (i+2 <= points.Length - 1)
+            {
+                for (float ratio = 0; ratio <= 1f; ratio += 1.0f / vertexCount)
+                {
+                    var tangentLineVertex1 = Vector3.Lerp(points[i], points[i + 1], ratio);
+                    var tangentLineVertex2 = Vector3.Lerp(points[i + 1], points[i + 2], ratio);
+                    var bezierpoint = Vector3.Lerp(tangentLineVertex1, tangentLineVertex2, ratio);
+                    pointList.Add(bezierpoint);
+                }
+            }
+        }
+        return pointList.ToArray();
+    }
 
     private void Awake()
     {
         GetInitiatorPoints();
 
         //Assing lists and arrays
-        _positions = new Vector3[initiatorPointAmount + 1];
-        _targetPositions = new Vector3[initiatorPointAmount + 1];
+        _positions = new Vector3[_initiatorPointAmount + 1];
+        _targetPositions = new Vector3[_initiatorPointAmount + 1];
         lineSegments = new List<LineSegment>();
-        keys = generator.keys;
+        _keys = _generator.keys;
 
         rotateVector = Quaternion.AngleAxis(initialRotation, rotateAxis) * rotateVector;
 
-        for (int i = 0; i < initiatorPointAmount; i++)
+        for (int i = 0; i < _initiatorPointAmount; i++)
         {
-            _positions[i] = rotateVector * initiatorSize;
-            rotateVector = Quaternion.AngleAxis(360 / initiatorPointAmount, rotateAxis) * rotateVector;
+            _positions[i] = rotateVector * _initiatorSize;
+            rotateVector = Quaternion.AngleAxis(360 / _initiatorPointAmount, rotateAxis) * rotateVector;
         }
 
-        _positions[initiatorPointAmount] = _positions[0];
+        _positions[_initiatorPointAmount] = _positions[0];
         _targetPositions = _positions;
+
+        for (int i = 0; i < _startGens.Length; i++)
+        {
+            KochGenerate(_targetPositions, _startGens[i].outwards, _startGens[i].scale);
+        }
     }
 
     protected void KochGenerate(Vector3[] positions, bool outwards, float generatorMultiplier)
@@ -104,10 +141,10 @@ public class KochGenerator : MonoBehaviour
             newPos.Add(lineSegments[i].StartPosition);
             targetPos.Add(lineSegments[i].StartPosition);
 
-            for (int j = 1; j < keys.Length - 1; j++)
+            for (int j = 1; j < _keys.Length - 1; j++)
             {
-                float moveAmount = lineSegments[i].Length * keys[j].time;
-                float heightAmount = (lineSegments[i].Length * keys[j].value) * generatorMultiplier;
+                float moveAmount = lineSegments[i].Length * _keys[j].time;
+                float heightAmount = (lineSegments[i].Length * _keys[j].value) * generatorMultiplier;
                 Vector3 movePos = lineSegments[i].StartPosition + (lineSegments[i].Direction * moveAmount);
                 Vector3 Dir;
 
@@ -130,77 +167,80 @@ public class KochGenerator : MonoBehaviour
         _targetPositions = new Vector3[targetPos.Count];
         _positions = newPos.ToArray();
         _targetPositions = targetPos.ToArray();
-
-        generationCount++;
+        _bezierPosition = BezierCurve(_targetPositions, _bezierVertexCount);
+        _generationCount++;
     }
+
+    public float _lengthOfSide;
 
     private void OnDrawGizmos()
     {
         GetInitiatorPoints();
-        initiatorPoint = new Vector3[initiatorPointAmount];
+        initiatorPoint = new Vector3[_initiatorPointAmount];
 
         rotateVector = Quaternion.AngleAxis(initialRotation, rotateAxis) * rotateVector;
 
-        for (int i = 0; i < initiatorPointAmount; i++)
+        for (int i = 0; i < _initiatorPointAmount; i++)
         {
-            initiatorPoint[i] = rotateVector * initiatorSize;
-            rotateVector = Quaternion.AngleAxis(360 / initiatorPointAmount, rotateAxis) * rotateVector;
+            initiatorPoint[i] = rotateVector * _initiatorSize;
+            rotateVector = Quaternion.AngleAxis(360 / _initiatorPointAmount, rotateAxis) * rotateVector;
         }
-        for (int i = 0; i < initiatorPointAmount; i++)
+        for (int i = 0; i < _initiatorPointAmount; i++)
         {
-            Gizmos.color = gizmosColor;
+            Gizmos.color = Color.white;
             Matrix4x4 rotationMatrix = Matrix4x4.TRS(transform.position, transform.rotation, transform.lossyScale);
             Gizmos.matrix = rotationMatrix;
 
-            if (i < initiatorPointAmount - 1)
+            if (i < _initiatorPointAmount - 1)
             {
-                Gizmos.DrawSphere(initiatorPoint[i], .25f);
+                Gizmos.DrawSphere(initiatorPoint[i], .1f);
                 Gizmos.DrawLine(initiatorPoint[i], initiatorPoint[i + 1]);
             }
             else
             {
-                Gizmos.DrawSphere(initiatorPoint[i], .25f);
+                Gizmos.DrawSphere(initiatorPoint[i], .1f);
                 Gizmos.DrawLine(initiatorPoint[i], initiatorPoint[0]);
             }
         }
 
+        _lengthOfSide = Vector3.Distance(initiatorPoint[0], initiatorPoint[1]) * .5f;
     }
 
     void GetInitiatorPoints()
     {
-        switch (initiator)
+        switch (_initiator)
         {
             case Initiator.Triangle:
-                initiatorPointAmount = 3;
+                _initiatorPointAmount = 3;
                 initialRotation = 0;
                 break;
             case Initiator.Square:
-                initiatorPointAmount = 4;
+                _initiatorPointAmount = 4;
                 initialRotation = 45;
                 break;
             case Initiator.Pentagon:
-                initiatorPointAmount = 5;
+                _initiatorPointAmount = 5;
                 initialRotation = 36;
                 break;
             case Initiator.Hexagon:
-                initiatorPointAmount = 6;
+                _initiatorPointAmount = 6;
                 initialRotation = 30;
                 break;
             case Initiator.Heptagon:
-                initiatorPointAmount = 7;
+                _initiatorPointAmount = 7;
                 initialRotation = 25.71428f;
                 break;
             case Initiator.Octagon:
-                initiatorPointAmount = 8;
+                _initiatorPointAmount = 8;
                 initialRotation = 22.5f;
                 break;
             default:
-                initiatorPointAmount = 3;
+                _initiatorPointAmount = 3;
                 initialRotation = 0;
                 break;
         }
 
-        switch (axis)
+        switch (_axis)
         {
             case InitiatorAxis.XAxis:
                 rotateVector = Vector3.right;
