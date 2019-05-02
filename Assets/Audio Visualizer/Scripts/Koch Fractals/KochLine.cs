@@ -23,6 +23,11 @@ public class KochLine : KochGenerator
     // Start is called before the first frame update
     void Start()
     {
+        if (!audioVisualizer)
+        {
+            audioVisualizer = AudioVisualizer.instance;
+        }
+
         lerpAudio = new float[_initiatorPointAmount];
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.enabled = true;
@@ -57,11 +62,11 @@ public class KochLine : KochGenerator
             {
                 if (useBuffer)
                 {
-                    lerpAudio[i] = audioVisualizer.audioBand[audioBand[i]];
+                    lerpAudio[i] = audioVisualizer.audioBandBuffer[audioBand[i]];
                 }
                 else
                 {
-                    lerpAudio[i] = audioVisualizer.audioBandBuffer[audioBand[i]];
+                    lerpAudio[i] = audioVisualizer.audioBand[audioBand[i]];
                 }
                 
                 for (int j = 0; j < (_positions.Length - 1) / _initiatorPointAmount; j++)
