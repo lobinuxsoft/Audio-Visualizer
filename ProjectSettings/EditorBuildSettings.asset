@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Audio Visualizer/Scenes/SampleScene.unity
+    path: Assets/Audio Tools/Scenes/SampleScene.unity
     guid: 13e7d2f798718944884fc8b22cc0c815
   m_configObjects: {}
