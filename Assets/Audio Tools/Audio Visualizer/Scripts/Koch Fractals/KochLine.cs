@@ -45,13 +45,20 @@ public class KochLine : KochGenerator
     // Update is called once per frame
     void Update()
     {
+        if (!audioVisualizer)
+        {
+            audioVisualizer = AudioVisualizer.instance;
+        }
+
         if (useBuffer)
         {
-            materialInstance.SetColor("_EmissionColor", color * audioVisualizer.audioBandBuffer[audioBandMaterial] * emissionMultiplier);
+            if(materialInstance != null)
+                materialInstance.SetColor("_EmissionColor", color * audioVisualizer.audioBandBuffer[audioBandMaterial] * emissionMultiplier);
         }
         else
         {
-            materialInstance.SetColor("_EmissionColor", color * audioVisualizer.audioBand[audioBandMaterial] * emissionMultiplier);
+            if (materialInstance != null)
+                materialInstance.SetColor("_EmissionColor", color * audioVisualizer.audioBand[audioBandMaterial] * emissionMultiplier);
         }
         
 

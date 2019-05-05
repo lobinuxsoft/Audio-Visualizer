@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioPlay : MonoBehaviour {
+public class AudioPlayRequest : MonoBehaviour {
 
     [SerializeField] bool playOnStart = false;
 

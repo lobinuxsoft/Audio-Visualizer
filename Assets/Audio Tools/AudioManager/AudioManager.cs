@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(AudioVisualizer))]
 public class AudioManager : MonoBehaviour
 {
 
@@ -36,6 +37,8 @@ public class AudioManager : MonoBehaviour
 
     GameObject musicContainer;
     GameObject sfxContainer;
+
+    AudioVisualizer audioVisualizer;
 
     static AudioManager audioManager;
 
@@ -76,6 +79,8 @@ public class AudioManager : MonoBehaviour
     {
         audioMixer = Resources.Load<AudioMixer>("Mixer");
         audioManager = this.GetComponent<AudioManager>();
+        audioVisualizer = GetComponent<AudioVisualizer>();
+        audioVisualizer.useAudioManager = true;
         DontDestroyOnLoad(this);
 
         if (musicList.Count > 0)

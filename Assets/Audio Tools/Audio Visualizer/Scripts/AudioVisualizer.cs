@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioVisualizer : MonoBehaviour
 {
     public static AudioVisualizer instance;
-    [SerializeField] bool useAudioManager = false;
+    public bool useAudioManager = false;
     public AudioSource audioSource;
     float[] samplesLeft = new float[512];
     float[] samplesRight = new float[512];
