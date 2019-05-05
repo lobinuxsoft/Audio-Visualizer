@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
     public void AddOnMusicChange(UnityAction method) { OnMusicChange.AddListener(method); }
     public void RemoveOnMusicChange(UnityAction method) { OnMusicChange.RemoveListener(method); }
 
-
+    //Return the AudioManager component, is not exist this create one
     public static AudioManager GetInstance()
     {
         if (!audioManager)
@@ -71,6 +71,7 @@ public class AudioManager : MonoBehaviour
         RuntimeVolumeControl();
     }
 
+    //Initialize the component
     void Initialization()
     {
         audioMixer = Resources.Load<AudioMixer>("Mixer");
@@ -94,6 +95,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //For start the default volume value
     IEnumerator InitVolumeDefault()
     {
         outMasterVolume = masterVolume;
@@ -106,6 +108,7 @@ public class AudioManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
     }
 
+    //This is for control volume in runtime
     void RuntimeVolumeControl()
     {
 
@@ -129,6 +132,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    //This create a music track object and components
     void CreateMusicTrack(AudioClip clip)
     {
         if (!ThisClipExistInMusicList(clip))
@@ -145,16 +149,16 @@ public class AudioManager : MonoBehaviour
         GameObject go = new GameObject(clip.name);
         go.transform.SetParent(musicContainer.transform);
         go.AddComponent<AudioSource>();
-        go.GetComponent<AudioSource>();
-        go.GetComponent<AudioSource>().loop = true;
-        go.GetComponent<AudioSource>().playOnAwake = false;
-        go.GetComponent<AudioSource>().volume = 0f;
-        go.GetComponent<AudioSource>().outputAudioMixerGroup = audioMixer.FindMatchingGroups("Music")[0];
-        go.GetComponent<AudioSource>().clip = clip;
-        musicTracks.Add(go.GetComponent<AudioSource>());
+        AudioSource tempTrack = go.GetComponent<AudioSource>();
+        tempTrack.loop = true;
+        tempTrack.playOnAwake = false;
+        tempTrack.volume = 0f;
+        tempTrack.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Music")[0];
+        tempTrack.clip = clip;
+        musicTracks.Add(tempTrack);
     }
 
-
+    //Search if the music exist in list
     bool ThisClipExistInMusicList(AudioClip clip)
     {
         bool temp = false;
@@ -172,11 +176,13 @@ public class AudioManager : MonoBehaviour
         return temp;
     }
 
+    //This is for external creation, a request
     public void CeateMusicTrackRequest(AudioClip clip)
     {
         CreateMusicTrack(clip);
     }
 
+    //Create a sounfx if not exist
     void CreateSfxTrack(AudioClip clip)
     {
         if (!ThisClipExistInSfxList(clip))
@@ -202,6 +208,7 @@ public class AudioManager : MonoBehaviour
         sfxTracks.Add(go.GetComponent<AudioSource>());
     }
 
+    //Search if the soundfx exist
     bool ThisClipExistInSfxList(AudioClip clip)
     {
         bool temp = false;
@@ -219,31 +226,37 @@ public class AudioManager : MonoBehaviour
         return temp;
     }
 
+    //For external creation, soundfx creation request
     public void CeateSfxTrackRequest(AudioClip clip)
     {
         CreateSfxTrack(clip);
     }
 
+    //Get the master volume
     public float GetMasterVolume()
     {
         return masterVolume;
     }
 
+    //Get the music volume
     public float GetMusicVolume()
     {
         return musicVolume;
     }
 
+    //Get the soundfx volume
     public float GetSfxVolume()
     {
         return sfxVolume;
     }
 
+    //This is for lerp the master volume from one value to another
     public void LerpMasterVolumeTo(float volumeValue, float speedToChange)
     {
         StartCoroutine(LerpMasterVolume(volumeValue, speedToChange));
     }
 
+    //This is for set specific value for the master volume
     public void SetMasterVolumeTo(float volumeValue)
     {
         masterVolume = volumeValue;
@@ -269,11 +282,13 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //This is for lerp te music volume from one value to another
     public void LerpMusicVolumeTo(float volumeValue, float speedToChange)
     {
         StartCoroutine(LerpMusicVolume(volumeValue, speedToChange));
     }
 
+    //This is for set specific value for the music volume
     public void SetMusicVolumeTo(float volumeValue)
     {
         musicVolume = volumeValue;
@@ -299,11 +314,13 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //This is for lerp te soundfx volume from one value to another
     public void LerpSfxVolumeTo(float volumeValue, float speedToChange)
     {
         StartCoroutine(LerpSfxVolume(volumeValue, speedToChange));
     }
 
+    //This is for set specific soundfx for the master volume
     public void SetSfxVolumeTo(float volumeValue)
     {
         sfxVolume = volumeValue;
@@ -329,6 +346,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //For play music, if not exist in list create one and play
     public void PlayMusic(AudioClip audioClip)
     {
         AudioSource temp;
@@ -356,6 +374,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //For play soundfx, if not exist in list create one and play
     public void PlaySfx(AudioClip audioClip)
     {
         AudioSource temp;
@@ -372,6 +391,7 @@ public class AudioManager : MonoBehaviour
         temp.Play();
     }
 
+    //For play soundfx, if not exist in list create one and play in loop mode
     public void PlaySfxInLoop(AudioClip audioClip){
         AudioSource temp;
 
@@ -390,6 +410,7 @@ public class AudioManager : MonoBehaviour
             temp.Play();
     }
 
+    //For stop soundfx, if not exist in list create one and stop include the loop mode
     public void StopSfxInLoop(AudioClip audioClip){
         AudioSource temp;
 
@@ -407,6 +428,7 @@ public class AudioManager : MonoBehaviour
         temp.Stop();
     }
 
+    //Stop all soundfx in loop mode
     public void StopAllSfxInLoop(){
         foreach (var clip in sfxTracks)
         {

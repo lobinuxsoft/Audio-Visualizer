@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class ControlAudioManagerTest : MonoBehaviour
 {
     [SerializeField] List<AudioClip> audioClips = new List<AudioClip>();
-    [SerializeField] 
+    [SerializeField] Slider slider;
     int musicIndex = 0;
 
     private void Start()
     {
-        
+        slider.value = AudioManager.GetInstance().GetMasterVolume();
     }
 
     public void ChangeMusic(int value)
@@ -30,5 +30,8 @@ public class ControlAudioManagerTest : MonoBehaviour
         AudioManager.GetInstance().PlayMusic(audioClips[musicIndex]);
     }
 
-   
+   public void SetMusicVolume(float volume)
+    {
+        AudioManager.GetInstance().SetMusicVolumeTo(volume);
+    }
 }

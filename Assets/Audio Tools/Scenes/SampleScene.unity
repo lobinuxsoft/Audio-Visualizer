@@ -400,7 +400,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515913565}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1038882651}
+        m_MethodName: ChangeMusic
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &515913565
@@ -857,8 +868,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f008d76b2c1c3f4f88e308378d24035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: []
-  musicIndex: 0
+  audioClips:
+  - {fileID: 8300000, guid: b3078f764731f32488d9e44a045c82ea, type: 3}
+  - {fileID: 8300000, guid: a414a4f0a4878a04bbe7fcb589dc05df, type: 3}
+  - {fileID: 8300000, guid: 4f02038a4085d094689c1a51cd1367cf, type: 3}
+  slider: {fileID: 1818125218}
 --- !u!114 &1038882652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,7 +1180,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1315310774}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1038882651}
+        m_MethodName: ChangeMusic
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1315310774
@@ -1718,15 +1743,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 1239486289}
   m_HandleRect: {fileID: 25558254}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114547950953641284}
-        m_MethodName: SetMusicVolumeTo
+      - m_Target: {fileID: 1038882651}
+        m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1919,18 +1944,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100506675}
   m_CullTransparentMesh: 0
---- !u!114 &114547950953641284 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114547950953641284, guid: f5c5ae457bd91c546ac8b16302787ae6,
-    type: 3}
-  m_PrefabInstance: {fileID: 3247763030632447359}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5d43deae73f4f4ca2372f7dd89441c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3247763030632447359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1941,6 +1954,11 @@ PrefabInstance:
     - target: {fileID: 1877388503857470, guid: f5c5ae457bd91c546ac8b16302787ae6, type: 3}
       propertyPath: m_Name
       value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 114547950953641284, guid: f5c5ae457bd91c546ac8b16302787ae6,
+        type: 3}
+      propertyPath: masterVolume
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4231535338501860, guid: f5c5ae457bd91c546ac8b16302787ae6, type: 3}
       propertyPath: m_LocalPosition.x
