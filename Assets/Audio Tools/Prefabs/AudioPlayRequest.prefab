@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0810687aa4f39c74da9a2a691f626297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playOnStart: 0
+  playOnStart: 1
   clip: {fileID: 8300000, guid: 4f02038a4085d094689c1a51cd1367cf, type: 3}

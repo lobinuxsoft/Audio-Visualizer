@@ -1,22 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomVisualEnabler : MonoBehaviour
 {
     [SerializeField] List<GameObject> effectsList = new List<GameObject>();
     GameObject activeEffect = null;
-    int index = 0;
+    public int index = 0;
 
-    // Start is called before the first frame update
+    // called third
     void Start()
     {
-        Random.InitState(System.DateTime.Today.Second);
         ActivateRandomEffect();
     }
 
     public void ActivateRandomEffect()
     {
+        Random.InitState((int)Time.time);
         if (effectsList.Count <= 0)
             return;
 

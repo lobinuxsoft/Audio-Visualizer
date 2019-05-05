@@ -64,6 +64,7 @@ public class Draw64MeshInACircle : MonoBehaviour
         Vector3 pos;
         pos = center.right * radius * Mathf.Sin(ang * Mathf.Deg2Rad);
         pos += center.forward * radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+        pos += center.position;
         return pos;
     }
 }
