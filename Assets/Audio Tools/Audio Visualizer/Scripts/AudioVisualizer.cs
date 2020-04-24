@@ -27,6 +27,7 @@ public class AudioVisualizer : MonoBehaviour
     [HideInInspector] public float[] audioBand64, audioBandBuffer64;
 
     [HideInInspector] public float amplitude, amplitudeBuffer;
+    
     float amplitudeHighest;
     public float audioProfile = 5;
 
@@ -36,7 +37,15 @@ public class AudioVisualizer : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(instance.gameObject);
+        }
     }
 
     // Start is called before the first frame update
@@ -44,7 +53,7 @@ public class AudioVisualizer : MonoBehaviour
     {
         if (useAudioManager)
         {
-            AudioManager.GetInstance().AddOnMusicChange(delegate { SetAudioSource(AudioManager.GetInstance().GetActiveTrack()); });
+            AudioManager.Instance.AddOnMusicChange(delegate { SetAudioSource(AudioManager.Instance.GetActiveTrack()); });
         }
 
         audioBand = new float[8];
