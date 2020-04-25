@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class SliderControl : MonoBehaviour
+public class UISliderControl : MonoBehaviour
 {
     [SerializeField] [Range(0, 100)] private float value = 50;
     [SerializeField] private string labelText;

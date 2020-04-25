@@ -5,15 +5,15 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(SimpleFader))]
+[RequireComponent(typeof(UISimpleFader))]
 public class AudioPanel : MonoBehaviour
 {
     public static AudioPanel instance;
 
     [SerializeField] private AudioManagerSettings audioManagerSettings;
-    [SerializeField] private SliderControl master;
-    [SerializeField] private SliderControl music;
-    [SerializeField] private SliderControl soundsFx;
+    [SerializeField] private UISliderControl master;
+    [SerializeField] private UISliderControl music;
+    [SerializeField] private UISliderControl soundsFx;
 
     [SerializeField] private Button acceptButton;
     [SerializeField] private Button cancelButton;

@@ -181,20 +181,21 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayMusic(AudioClip audioClip)
+    public void PlayMusic(string audioName)
     {
-        AudioSource temp;
+        AudioSource temp = null;
 
-        if (MusicTrackExist(audioClip.name))
+        if (MusicTrackExist(audioName))
         {
-            temp = GetMusicTrackByName(audioClip.name);
-        }
-        else
-        {
-            CreateMusicTrack(audioClip);
-            temp = GetMusicTrackByName(audioClip.name);
+            temp = GetMusicTrackByName(audioName);
         }
 
+        if (temp == null)
+        {
+            Debug.Log($"[<color=blue>{this.gameObject.name}</color>] The music track <color=red>{audioName}</color> not found");
+            return;
+        }
+        
         if (activeTrack != null && activeTrack.isPlaying)
         {
             if (activeTrack.name != temp.name)
@@ -208,56 +209,68 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySfx(AudioClip audioClip)
+    public void StopMusic()
     {
-        AudioSource temp;
+        if (activeTrack != null && activeTrack.isPlaying)
+        {
+            StartCoroutine(FadeOut(activeTrack, .1f));
+        }
+    }
 
-        if (SfxTrackExist(audioClip.name))
+    public void PlaySfx(string audioName)
+    {
+        AudioSource temp = null;
+
+        if (SfxTrackExist(audioName))
         {
-            temp = GetSfxTrackByName(audioClip.name);
+            temp = GetSfxTrackByName(audioName);
         }
-        else
+
+        if (temp == null)
         {
-            CreateSfxTrack(audioClip);
-            temp = GetSfxTrackByName(audioClip.name);
+            Debug.Log($"[<color=blue>{this.gameObject.name}</color>] The SoundFX track <color=red>{audioName}</color> not found");
+            return;
         }
+        
         temp.Play();
     }
 
-    public void PlaySfxInLoop(AudioClip audioClip){
+    public void PlaySfxInLoop(string audioName){
         
-        AudioSource temp;
+        AudioSource temp = null;
 
-        if (SfxTrackExist(audioClip.name))
+        if (SfxTrackExist(audioName))
         {
-            temp = GetSfxTrackByName(audioClip.name);
+            temp = GetSfxTrackByName(audioName);
             temp.loop = true;
         }
-        else
+        
+        if (temp == null)
         {
-            CreateSfxTrack(audioClip);
-            temp = GetSfxTrackByName(audioClip.name);
-            temp.loop = true;
+            Debug.Log($"[<color=blue>{this.gameObject.name}</color>] The SoundFX track <color=red>{audioName}</color> not found");
+            return;
         }
+        
         if(!temp.isPlaying)
             temp.Play();
     }
 
-    public void StopSfxInLoop(AudioClip audioClip){
+    public void StopSfxInLoop(string audioName){
         
-        AudioSource temp;
+        AudioSource temp = null;
 
-        if (SfxTrackExist(audioClip.name))
+        if (SfxTrackExist(audioName))
         {
-            temp = GetSfxTrackByName(audioClip.name);
+            temp = GetSfxTrackByName(audioName);
             temp.loop = false;
         }
-        else
+        
+        if (temp == null)
         {
-            CreateSfxTrack(audioClip);
-            temp = GetSfxTrackByName(audioClip.name);
-            temp.loop = false;
+            Debug.Log($"[<color=blue>{this.gameObject.name}</color>] The SoundFX track <color=red>{audioName}</color> not found");
+            return;
         }
+        
         temp.Stop();
     }
 

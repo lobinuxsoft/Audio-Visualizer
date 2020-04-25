@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d19ad19698ddbd4dbf7b23de3abbd07, type: 3}
   m_Name: AudioManagerSettings
   m_EditorClassIdentifier: 
-  masterVolume: -37
+  masterVolume: -20.596571
   masterLerpCurve:
     serializedVersion: 2
     m_Curve:
