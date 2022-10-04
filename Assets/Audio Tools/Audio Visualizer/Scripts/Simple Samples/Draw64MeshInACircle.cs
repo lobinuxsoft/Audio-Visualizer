@@ -40,9 +40,9 @@ public class Draw64MeshInACircle : MonoBehaviour
             {
                 positions[i] = PosInCircle(this.transform, maxRadius, (float)i / 64);
 
-                Color color = colors[i] * AudioVisualizer.instance.audioBandBuffer64[i];
+                Color color = colors[i] * AudioVisualizer.instance.AudioBandBuffer64[i];
                 materials[i].SetColor("_EmissionColor", color * colorMultiplier);
-                matrixs[i] = Matrix4x4.TRS(positions[i], this.transform.rotation, new Vector3(defaultMeshScale.x, (AudioVisualizer.instance.audioBandBuffer64[i] * maxScale) + defaultMeshScale.y, defaultMeshScale.z));
+                matrixs[i] = Matrix4x4.TRS(positions[i], this.transform.rotation, new Vector3(defaultMeshScale.x, (AudioVisualizer.instance.AudioBandBuffer64[i] * maxScale) + defaultMeshScale.y, defaultMeshScale.z));
                 Graphics.DrawMesh(mesh,matrixs[i], materials[i], 0);
 
             }
@@ -50,9 +50,9 @@ public class Draw64MeshInACircle : MonoBehaviour
             {
                 positions[i] = PosInCircle(this.transform, maxRadius, (float)i / 64);
 
-                Color color = colors[i] * AudioVisualizer.instance.audioBand64[i];
+                Color color = colors[i] * AudioVisualizer.instance.AudioBand64[i];
                 materials[i].SetColor("_EmissionColor", color * colorMultiplier);
-                matrixs[i] = Matrix4x4.TRS(positions[i], this.transform.rotation, new Vector3(defaultMeshScale.x, (AudioVisualizer.instance.audioBand64[i] * maxScale) + defaultMeshScale.y, defaultMeshScale.z));
+                matrixs[i] = Matrix4x4.TRS(positions[i], this.transform.rotation, new Vector3(defaultMeshScale.x, (AudioVisualizer.instance.AudioBand64[i] * maxScale) + defaultMeshScale.y, defaultMeshScale.z));
                 Graphics.DrawMesh(mesh, matrixs[i], materials[i], 0);
             }
         }

@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ColorWithAudioAmplitude : MonoBehaviour
 {
     [SerializeField] Material material;
     Material materialInstance;
-    [ColorUsage(true, true)] public Color customColor = new Color(3, 1, 0, 1);
+    [GradientUsage(true)] public Gradient customGradient;
     public bool useBuffer = true;
     MeshRenderer meshRenderer;
 
@@ -23,21 +21,13 @@ public class ColorWithAudioAmplitude : MonoBehaviour
     {
         if (useBuffer)
         {
-            Color color = new Color(
-                                        customColor.r * AudioVisualizer.instance.amplitudeBuffer,
-                                        customColor.g * AudioVisualizer.instance.amplitudeBuffer,
-                                        customColor.b * AudioVisualizer.instance.amplitudeBuffer
-                                    );
+            Color color = customGradient.Evaluate(AudioVisualizer.instance.AmplitudeBuffer);
 
             materialInstance.SetColor("_EmissionColor", color);
         }
         else
         {
-            Color color = new Color(
-                                        customColor.r * AudioVisualizer.instance.amplitude,
-                                        customColor.g * AudioVisualizer.instance.amplitude,
-                                        customColor.b * AudioVisualizer.instance.amplitude
-                                    );
+            Color color = customGradient.Evaluate(AudioVisualizer.instance.Amplitude);
 
             materialInstance.SetColor("_EmissionColor", color);
         }

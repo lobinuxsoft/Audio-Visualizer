@@ -14,18 +14,18 @@ public class RotateWithAudioAmplitude : MonoBehaviour
         if (useBuffer)
         {
             this.transform.Rotate(
-                                rotateAxis.x * rotateSpeed.x * Time.deltaTime * AudioVisualizer.instance.amplitudeBuffer,
-                                rotateAxis.y * rotateSpeed.y * Time.deltaTime * AudioVisualizer.instance.amplitudeBuffer,
-                                rotateAxis.z * rotateSpeed.z * Time.deltaTime * AudioVisualizer.instance.amplitudeBuffer,
+                                rotateAxis.x * rotateSpeed.x * Time.deltaTime * AudioVisualizer.instance.AmplitudeBuffer,
+                                rotateAxis.y * rotateSpeed.y * Time.deltaTime * AudioVisualizer.instance.AmplitudeBuffer,
+                                rotateAxis.z * rotateSpeed.z * Time.deltaTime * AudioVisualizer.instance.AmplitudeBuffer,
                                 Space.Self
                               );
         }
         else
         {
             this.transform.Rotate(
-                                rotateAxis.x * rotateSpeed.x * Time.deltaTime * AudioVisualizer.instance.amplitude,
-                                rotateAxis.y * rotateSpeed.y * Time.deltaTime * AudioVisualizer.instance.amplitude,
-                                rotateAxis.z * rotateSpeed.z * Time.deltaTime * AudioVisualizer.instance.amplitude,
+                                rotateAxis.x * rotateSpeed.x * Time.deltaTime * AudioVisualizer.instance.Amplitude,
+                                rotateAxis.y * rotateSpeed.y * Time.deltaTime * AudioVisualizer.instance.Amplitude,
+                                rotateAxis.z * rotateSpeed.z * Time.deltaTime * AudioVisualizer.instance.Amplitude,
                                 Space.Self
                               );
         }

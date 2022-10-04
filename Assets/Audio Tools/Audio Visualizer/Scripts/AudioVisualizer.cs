@@ -1,39 +1,53 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioVisualizer : MonoBehaviour
 {
     public static AudioVisualizer instance;
     public bool useAudioManager = false;
     public AudioSource audioSource;
+
+    // Stereo Sampler
     float[] samplesLeft = new float[512];
     float[] samplesRight = new float[512];
 
+    // Frequency Band 8
     float[] freqBand = new float[8];
     float[] bandBuffer = new float[8];
     float[] bufferDecrease = new float[8];
     float[] freqBandHighest = new float[8];
 
-    //Audio 64
+    //Frequency Band 64
     float[] freqBand64 = new float[64];
     float[] bandBuffer64 = new float[64];
     float[] bufferDecrease64 = new float[64];
     float[] freqBandHighest64 = new float[64];
 
-    [HideInInspector] public float[] audioBand, audioBandBuffer;
+    // Audio 8
+    float[] audioBand, audioBandBuffer;
 
     //Audio 64
-    [HideInInspector] public float[] audioBand64, audioBandBuffer64;
+    float[] audioBand64, audioBandBuffer64;
 
-    [HideInInspector] public float amplitude, amplitudeBuffer;
+    float amplitude, amplitudeBuffer;
     
     float amplitudeHighest;
     public float audioProfile = 5;
 
     public enum Channel { STEREO, LEFT, RIGHT}
 
-    public Channel channel = Channel.STEREO;
+    [SerializeField] Channel channel = Channel.STEREO;
+
+    public float[] AudioBand => audioBand;
+
+    public float[] AudioBandBuffer => audioBandBuffer;
+
+    public float[] AudioBand64 => audioBand64;
+
+    public float[] AudioBandBuffer64 => audioBandBuffer64;
+
+    public float Amplitude => amplitude;
+
+    public float AmplitudeBuffer => amplitudeBuffer;
 
     private void Awake()
     {

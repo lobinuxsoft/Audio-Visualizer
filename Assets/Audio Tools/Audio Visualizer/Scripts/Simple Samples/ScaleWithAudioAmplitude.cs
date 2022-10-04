@@ -13,17 +13,17 @@ public class ScaleWithAudioAmplitude : MonoBehaviour
         if (useBuffer)
         {
             transform.localScale = new Vector3(
-                                                (AudioVisualizer.instance.amplitudeBuffer * maxScale) + startScale,
-                                                (AudioVisualizer.instance.amplitudeBuffer * maxScale) + startScale,
-                                                (AudioVisualizer.instance.amplitudeBuffer * maxScale) + startScale
+                                                (AudioVisualizer.instance.AmplitudeBuffer * maxScale) + startScale,
+                                                (AudioVisualizer.instance.AmplitudeBuffer * maxScale) + startScale,
+                                                (AudioVisualizer.instance.AmplitudeBuffer * maxScale) + startScale
                                                );
         }
         else
         {
             transform.localScale = new Vector3(
-                                                (AudioVisualizer.instance.amplitude * maxScale) + startScale,
-                                                (AudioVisualizer.instance.amplitude * maxScale) + startScale,
-                                                (AudioVisualizer.instance.amplitude * maxScale) + startScale
+                                                (AudioVisualizer.instance.Amplitude * maxScale) + startScale,
+                                                (AudioVisualizer.instance.Amplitude * maxScale) + startScale,
+                                                (AudioVisualizer.instance.Amplitude * maxScale) + startScale
                                                );
         }
     }

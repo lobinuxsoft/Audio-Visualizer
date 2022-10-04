@@ -103,7 +103,7 @@ public class KochTrail : KochGenerator
 
     void Movement()
     {
-        lerpPosSpeed = Mathf.Lerp(speedMinMax.x, speedMinMax.y, audioVisualizer.amplitude);
+        lerpPosSpeed = Mathf.Lerp(speedMinMax.x, speedMinMax.y, audioVisualizer.Amplitude);
         for (int i = 0; i < trails.Count; i++)
         {
             
@@ -150,28 +150,28 @@ public class KochTrail : KochGenerator
             float widthLerp, timeLerp;
             if (useBuffer)
             {
-                colorLerp = Color.Lerp(startColor, trails[i].EmissionColor * colorMultiplier, audioVisualizer.audioBandBuffer[audioBand[i]]);
+                colorLerp = Color.Lerp(startColor, trails[i].EmissionColor * colorMultiplier, audioVisualizer.AudioBandBuffer[audioBand[i]]);
                 trails[i].Trail.material.SetColor("_EmissionColor", colorLerp);
-                colorLerp = Color.Lerp(startColor, endColor, audioVisualizer.audioBandBuffer[audioBand[i]]);
+                colorLerp = Color.Lerp(startColor, endColor, audioVisualizer.AudioBandBuffer[audioBand[i]]);
                 trails[i].Trail.material.SetColor("_Color", colorLerp);
 
-                widthLerp = Mathf.Lerp(widthMinMax.x, widthMinMax.y, audioVisualizer.audioBandBuffer[audioBand[i]]);
+                widthLerp = Mathf.Lerp(widthMinMax.x, widthMinMax.y, audioVisualizer.AudioBandBuffer[audioBand[i]]);
                 trails[i].Trail.widthMultiplier = widthLerp;
 
-                timeLerp = Mathf.Lerp(trailTimeMinMax.x, trailTimeMinMax.y, audioVisualizer.audioBandBuffer[audioBand[i]]);
+                timeLerp = Mathf.Lerp(trailTimeMinMax.x, trailTimeMinMax.y, audioVisualizer.AudioBandBuffer[audioBand[i]]);
                 trails[i].Trail.time = timeLerp;
             }
             else
             {
-                colorLerp = Color.Lerp(startColor, trails[i].EmissionColor * colorMultiplier, audioVisualizer.audioBand[audioBand[i]]);
+                colorLerp = Color.Lerp(startColor, trails[i].EmissionColor * colorMultiplier, audioVisualizer.AudioBand[audioBand[i]]);
                 trails[i].Trail.material.SetColor("_EmissionColor", colorLerp);
-                colorLerp = Color.Lerp(startColor, endColor, audioVisualizer.audioBand[audioBand[i]]);
+                colorLerp = Color.Lerp(startColor, endColor, audioVisualizer.AudioBand[audioBand[i]]);
                 trails[i].Trail.material.SetColor("_Color", colorLerp);
 
-                widthLerp = Mathf.Lerp(widthMinMax.x, widthMinMax.y, audioVisualizer.audioBand[audioBand[i]]);
+                widthLerp = Mathf.Lerp(widthMinMax.x, widthMinMax.y, audioVisualizer.AudioBand[audioBand[i]]);
                 trails[i].Trail.widthMultiplier = widthLerp;
 
-                timeLerp = Mathf.Lerp(trailTimeMinMax.x, trailTimeMinMax.y, audioVisualizer.audioBand[audioBand[i]]);
+                timeLerp = Mathf.Lerp(trailTimeMinMax.x, trailTimeMinMax.y, audioVisualizer.AudioBand[audioBand[i]]);
                 trails[i].Trail.time = timeLerp;
             }
         }
